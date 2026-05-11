@@ -1,0 +1,21 @@
+#! /bin/bash
+
+
+removeDriver()
+{
+	if ( make clean -C ../ )
+	then
+		echo "Appication clean Sucessfully"
+		echo
+	else
+		echo "ERROR: Application make clean failed"
+		read
+	fi
+
+	if (rmmod CDD_Dir)
+	then
+		echo "remove Driver Sucessfully"
+	else
+		echo "ERROR: remove Driver Failed"
+	fi
+}

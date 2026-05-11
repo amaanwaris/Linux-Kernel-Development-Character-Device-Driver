@@ -1,0 +1,24 @@
+#! /bin/bash
+
+
+watchDriver()
+{
+	if (lsmod)
+	then
+		echo "lsmod sucessfully"
+		echo "Press Enter for dmesg"
+		read
+		dmesg
+		echo "dmesg sucessfully"
+		echo "Press Enter for CAT/Proc"
+		read
+		cat /proc/devices
+		echo "exit from wathDriver"
+		read
+	else
+		echo "ERROR: watchDriver Failed"
+		read
+	fi
+
+
+}

@@ -1,0 +1,13 @@
+#include"header.h"
+#include"declare.h"
+
+int main()
+{
+#ifdef DEBUG
+	printf("%s Begin\n",__func__);
+#endif
+#ifdef DEBUG
+	printf("%s end\n",__func__);
+#endif
+	return 0;
+}

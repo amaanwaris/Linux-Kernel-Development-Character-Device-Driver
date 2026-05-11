@@ -1,0 +1,66 @@
+#! /bin/bash
+
+source ./build_application.sh
+source ./run_application.sh
+source ./fmainMenu
+source ./fbuildDriver
+source ./finsertDriver
+source ./fwatchDriver
+source ./fremoveDriver
+source ./fexitScripts
+
+objdumpshowsections()
+{
+	objdump -h cdd.ko
+}
+objdumpdisassembly()
+{
+         objdump cdd.ko -d -j .modinfo
+}
+
+
+while true
+do 
+
+	mainMenu
+	case $? in
+
+		1)
+			buildDriver
+			;;
+		2)
+			insertDriver
+			;;
+		3)
+			watchDriver
+			;;
+		4)
+			removeDriver
+			;;
+		5)
+			cleanstuff
+			;;
+		6)
+			driverinfo
+			;;
+		7)
+			objdumpshowsections
+			;;
+		8)	
+			objdumpdisassembly
+			;;
+		11)
+			build_application
+			;;
+		12)
+			run_application $1 
+			;;
+		0)
+			exitScripts
+			;;
+		*)
+			echo "ERROR: Invalid choice..."
+
+
+	esac
+done 

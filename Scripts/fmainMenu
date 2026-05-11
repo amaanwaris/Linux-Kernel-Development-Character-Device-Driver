@@ -1,0 +1,25 @@
+#! /bin/bash
+
+
+mainMenu()
+{
+	echo "____MAIN MENU____"
+	echo "01. Build Driver"
+	echo "02. Insert Driver"
+	echo "03. Watch Driver"
+	echo "04. Remove Driver"
+	echo "05. Clean"
+	echo "06. Driver Info"
+	echo "07. objdumpshowsections"
+	echo "08. objdumpdiassably"
+	echo "09."
+	echo "10."
+	echo "11. Build Application"
+	echo "12. run Application"
+	echo "0. Exit "
+	echo "Please enter your choice"
+	read ch
+	return $ch
+
+
+}

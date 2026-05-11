@@ -1,0 +1,15 @@
+#! /bin/bash
+
+
+buildDriver()
+{
+		if ( make -C ../ )
+		then
+			echo "Build Driver Sucessfully"
+			echo
+		else
+			echo "ERROR: Build Driver Failed"
+			read
+		fi
+
+}

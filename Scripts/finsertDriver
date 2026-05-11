@@ -1,0 +1,14 @@
+#! /bin/bash
+
+
+insertDriver()
+{
+	if (insmod ../modules/CDD_Dir.ko nod=3 devsize=256 regsize=4 datasize=8 nofregs=8) 
+	then
+		echo "Insert Driver Sucessfully"
+		echo
+	else
+		echo "EEROR: Insert Driver Failed"
+		read
+	fi
+}
